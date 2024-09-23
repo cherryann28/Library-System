@@ -107,67 +107,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 					<p><i class="fa-solid fa-arrow-down"></i> Returned</p>
 				</div>
 			</div>
-
         </div>
-            <!-- <div class="create-form"> 
-				<h2>Create Account</h2>
-                <form action="<?= base_url('process_create_account');?>" method="post">
-                    <div class="input-div">
-                        <div>
-                            <h5>School ID</h5>
-                            <p><?=$this->session->flashdata('school_id') ?></p>
-                            <input class="input" type="text" name="school_id">
-                        </div>
-                    </div>
-                   
-                    <div class="input-div">
-                        <div>             
-                            <h5>Name</h5>
-                            <p><?=$this->session->flashdata('name') ?></p>
-                            <input class="input" type="text" name="name">
-                        </div>
-                    </div>
-                   
-                    <div class="input-div">
-                        <div>
-                            <h5>Phone Number</h5>
-                            <p><?=$this->session->flashdata('contact_number') ?></p>
-                            <input class="input" type="text" name="contact_number">
-                        </div>
-                    </div>
-                    
-                    <div class="input-div">
-                        <div>
-                            <h5>Are you a student or faculty?</h5>
-                            <p><?=$this->session->flashdata('user_level') ?></p>
-                            <select name="user_level">
-                                <option value="">Select</option>
-                                <option value="student">Student</option>
-                                <option value="faculty">Faculty</option>
-                            </select>
-                        </div>
-                    </div>
-                    <br>
-                  
-                    <div class="input-div">
-                        <div>
-                            <h5>School E-mail</h5>
-                            <p><?=$this->session->flashdata('email') ?></p>
-                            <input class="input" type="text" name="email">
-                        </div>
-                    </div>
-                   
-                    <div class="input-div">
-                        <div>     
-                            <h5>Password</h5>
-                            <p><?=$this->session->flashdata('password') ?></p>
-                            <input class="input" type="password" name="password">
-                        </div>
-                    </div>
-                    <input type="submit" class="btn" value="Create Account">
-                </form>
-			</div> -->
-			
+        
 		</div>
 		<div id="about">
 			<div class="title">

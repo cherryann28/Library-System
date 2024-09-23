@@ -106,7 +106,6 @@ class Admins extends CI_Controller {
         $this->load->view('templates/header.php');
         $this->load->view('admin/student_list', $data);
         $this->load->view('templates/footer.php');
-
     }
  
     /*
