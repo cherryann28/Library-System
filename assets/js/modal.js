@@ -51,7 +51,6 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
     var acceptReturnModal = document.getElementById('acceptReturnModal');
     var acceptReturnLinks = document.querySelectorAll('.open-accept-return-modal');
@@ -83,7 +82,7 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
+// Accept Modal
 document.addEventListener('DOMContentLoaded', function() {
     var acceptRenewModal = document.getElementById('acceptRenewModal');
     var acceptRenewLinks = document.querySelectorAll('.open-accept-renew-modal');
@@ -112,4 +111,104 @@ document.addEventListener('DOMContentLoaded', function() {
             acceptRenewModal.style.display = 'none';
         }
     });
+});
+
+// Issue Modal
+document.addEventListener('DOMContentLoaded', function() {
+    var modal = document.getElementById("issueModal");
+    var span = document.getElementsByClassName("close")[0];
+    var closeBtns = document.getElementsByClassName("close-btn");
+    var issueButtons = document.querySelectorAll('.borrow');
+    var bookIdField = document.getElementById('book_id');
+
+    issueButtons.forEach(function(button) {
+        button.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent the default link behavior
+            var bookId = this.getAttribute('data-book-id');
+            bookIdField.value = bookId;
+            modal.style.display = "block";
+        });
+    });
+
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    Array.from(closeBtns).forEach(function(btn) {
+        btn.onclick = function() {
+            modal.style.display = "none";
+        }
+    });
+
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+});
+
+
+// Return and Renew Modal
+document.addEventListener('DOMContentLoaded', function() {
+    var returnBookModal = document.getElementById('returnBookModal');
+    var renewBookModal = document.getElementById('renewBookModal');
+    var returnLinks = document.querySelectorAll('.open-return-modal');
+    var renewLinks = document.querySelectorAll('.open-renew-modal');
+    // Check for error message in session and log it
+    console.log("Error Message: ", "<?= $this->session->flashdata('error') ?>");
+
+
+    // Open Return Book Modal
+    returnLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('return_book_id').value = this.getAttribute('data-book-id');
+            returnBookModal.style.display = 'block';
+        });
+    });
+
+    // Open Renew Book Modal
+    renewLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault();
+            document.getElementById('renew_book_id').value = this.getAttribute('data-book-id');
+            renewBookModal.style.display = 'block';
+
+            // Check if there's a flash message
+            var errorMessage = "<?= $this->session->flashdata('error') ?>";
+            if (errorMessage) {
+                document.querySelector('.error-message').innerText = errorMessage;
+            }
+
+            var successMessage = "<?= $this->session->flashdata('success') ?>";
+            if (successMessage) {
+                document.querySelector('.success-message').innerText = successMessage;
+            }
+        });
+    });
+
+    // Close Return Book Modal
+    document.querySelectorAll('.close-return, .close-return-btn').forEach(function(element) {
+        element.addEventListener('click', function() {
+            returnBookModal.style.display = 'none';
+        });
+    });
+
+    // Close Renew Book Modal
+    document.querySelectorAll('.close-renew, .close-renew-btn').forEach(function(element) {
+        element.addEventListener('click', function() {
+            renewBookModal.style.display = 'none';
+        });
+    });
+
+    // Close Modals when clicking outside
+    window.addEventListener('click', function(event) {
+        if (event.target == returnBookModal) {
+            returnBookModal.style.display = 'none';
+        }
+        if (event.target == renewBookModal) {
+            renewBookModal.style.display = 'none';
+        }
+    });
+
 });
