@@ -1,0 +1,167 @@
+
+/* Define variables */
+:root {
+    --primary-color: #059212;
+    --font-size: 16px;
+    --font-color: #059212;
+    --background-color1: #059212;
+    --background-color2: #06D001;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.nav-bar{
+    height: 15vh;
+    background-color:  var(--background-color1);
+    display: flex;
+    color: #FFFF; 
+    justify-content: space-between; 
+  }
+  
+.nav-bar .logo{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav-bar .logo img{
+    width:60px;
+    height: 60px;
+}
+
+.nav-bar .logo h1{
+    font-size: 28px;
+}
+
+.nav-bar .logo, .nav-bar .logout{
+    margin: 0 100px;
+}
+
+.nav-bar .logout{
+    display: flex;
+    align-items: center;
+    /* gap: 20px; */
+}
+
+.nav-bar .logout a  { 
+    font-size: 16px;
+    color: #ffff;
+    text-decoration: none;
+}
+
+.nav-bar .logout i{
+    font-size: 20px;
+}
+
+h4{
+    position: relative;
+    left: 100px;
+    top: 60px;
+    font-size: 20px;
+    font-weight: lighter;
+    padding-bottom: 20px;
+    border-bottom: 2px solid var(--font-color);
+    width: 86%;
+}
+
+.icon_container{
+    margin-top: 60px;
+    /* outline: 2px solid red; */
+    height: 50vh;
+    width: 100%;
+    align-content: center;
+}
+.icons{
+    /* position: absolute;
+    top: 200px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap; */
+    /* outline: 1px solid blue; */
+    margin: 50px 0; 
+    display: flex;
+    justify-content: space-around;
+}
+
+.icon{
+    width: 200px;
+    /* border: 1px solid red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+    /* display: flex; */
+    /* justify-content: space-around; */
+    align-content: center;  
+}
+
+.icon h5{
+    margin-top: 10px;
+    
+}
+
+
+
+.menu-icon{
+    /* color: #428A33; */
+    font-size: 60px;
+}
+
+.icon-inbox{
+    color: #e62e84;
+}
+
+.icon-book{
+    color: #5ec47b;
+}
+
+.icon-tasks{
+    color: #5caed4;
+}
+
+.icon-list{
+    color: #673185;
+}
+
+
+
+
+
+
+.icon .messages .total{
+    background-color: #e62e2d;
+    position: relative;
+    left: 60px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50px;
+}
+
+
+.icon .messages .total p{
+    text-align: center;
+    position: relative;
+    top: 6px;
+    color: #ffff;
+}
+
+footer{
+    /* background-color:  #428A33; */
+    background-color: var(--background-color1);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    color: #ffff;
+    padding: 10px 0;
+    text-align: center;
+    font-size: 14px;
+}

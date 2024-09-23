@@ -1,0 +1,364 @@
+/* Define your variables */
+:root {
+  --primary-color: #06D001;
+  --font-size: 16px;
+  --background-color1: #059212;
+  --background-color2: #06D001;
+  /* ERROR MSSAGE RED */
+    /* background-color: #f7d7da;
+    border: 0.5px solid #e62e2d; */
+}
+
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  /* font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+  font-family: 'Poppins', sans-serif;
+}
+
+ul li{
+  list-style-type: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.scontainer{
+  height: 100vh;
+  width: 100%;
+  background-color: #ffff;
+}
+
+.nav-bar{
+  height: 10vh;
+  background-color:  var(--background-color1);
+  display: flex;
+  color: #FFFF; 
+  justify-content: space-between; 
+}
+
+.name, .dropdown{
+  margin: 0 60px;
+  font-size: 20px;
+  align-content: center;
+}
+
+.name h1{
+  font-size: 24px; 
+  color: #ffff;
+}
+
+.dropdown a{
+  color: #fff;
+  text-decoration: none;
+}
+
+.dropdown-menu a{
+  color: #444;
+}
+
+.dropdown-menu{
+  background-color: var(--background-color2);
+}
+
+.nav-bar .name a{
+  color: #ffff;
+  font-size: 18px;  
+  text-decoration: none;
+}
+
+.side-bar{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color:  var(--background-color1);
+  width: 270px;
+  height: 90vh;
+}
+
+.side-bar .logo{
+  align-content: center;
+}
+
+.side-bar .logo img{
+  height: 15vh;
+}
+
+.side-bar .dashboard{
+  margin: 20px 0;
+}
+
+.dashboard {
+  width: 270px; 
+  height: auto;
+}
+
+.dashboard ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.dashboard ul li {
+  width: 100%; 
+}
+
+.dashboard ul li a{
+  display: inline-block; /* Make the link an inline block for proper centering */
+  color: #ffff;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px; 
+  padding: 10px 20px;
+  /* margin-left: 5px;  */
+  width: 100%;
+  transition: background-color 0.3s, color 0.3s; 
+  box-sizing: border-box; 
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.dashboard ul li a:hover {
+  background-color: #fff; 
+  color: var(--background-color1);
+  text-decoration: none;
+}
+
+.dashboard  ul li.active a {
+  background-color: #fff; 
+  color: #428A33; 
+}
+
+.dashboard i{
+  margin-right: 10px;
+}
+
+
+/***** TABLE CSS FOR BOOK LIST and RETURN REQUEST and RENEW REQUEST and CURRENTLY_ISSUED_BOOKS *****/
+
+.data{
+  position: absolute;
+  left: 345px;
+  width: 70%;
+  top: 100px;
+  color: gray;
+  font-size: 14px;
+}  
+
+.data .search{
+  position: absolute;
+  right: 10%;
+  top: 0;
+}
+
+.data .search input{
+  padding: 10px;
+  width: 150%;
+  border: 1px solid #eaeaea; 
+  outline: none;
+  background-color:#f9f9f9;
+}
+
+.data h2{
+  text-align: center;
+  font-size: 24px;
+  margin: 30px 0 20px 0;
+  color: #444;
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th {
+  background-color: var(--background-color2);
+  color: #f9f9f9;
+}
+
+th, td {
+  text-align: left;
+  padding: 8px 0 8px 20px;
+  /* outline: 1px solid red; */
+}
+
+td button{
+  outline: none;
+}
+
+tr:nth-child(even){
+  background-color:#f9f9f9;
+  border: 1px solid #eaeaea;
+}
+
+tr:nth-child(odd){
+  background-color: #fff;
+}
+
+tr:hover{
+  background-color: #eeee;
+}
+
+.no_found{
+  text-align: center;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 100px;
+  color: #444;
+}
+
+#edit, #renew, #return{
+  background-color: var(--background-color2);
+  padding: 4px 8px; 
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 12px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.10), 0px 4px 4px rgba(0, 0, 0, 0.10);  
+}
+
+#edit:hover, #renew:hover, #return:hover{
+  background-color: var(--background-color1);
+}
+
+/**** no search result flash message ****/
+.search_error{
+  text-align: center;
+  font-size: 20px;
+  color:#4baa38;
+}
+
+.data h1{
+  margin-top: 100px;
+  text-align: center;
+}
+
+/***** PAGINATION CSS ****/
+.data .pagination{
+  margin-top: 30px;
+  display: flex;          
+  justify-content: center;
+  align-items: center;  
+  
+}
+
+.pagination .previous, .pagination .next{
+  background-color: var(--background-color2);
+  border-radius: 5px;
+  padding: 5px 15px;
+  color: #FFFF;
+  margin: 0 10px;
+}
+
+.pagination a{
+  margin: 0 5px;
+  text-decoration: none !important;
+  color:#111;
+}
+
+.pagination .previous:hover, .pagination .next:hover{
+  background-color: var(--background-color1);
+}
+
+.pagination .active {
+  color: #808080;
+  
+}
+
+/***** BOOTSTRAP FORM CSS ******/
+.forms-container{
+  position: absolute;
+  left: 417px;
+  width: 60%;
+  top: 150px;
+}
+
+.form-container {
+  max-width: 800px; 
+  margin: auto;
+  padding: 20px 40px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+  color: gray;
+  font-size: 14px;
+} 
+
+.form-container .form-group span p{
+  display: block; 
+  margin: 0;
+  padding: 0; 
+  color: red;
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.form-container .btn{
+  position: relative;
+  left: 85%;
+}
+
+.form-container .btn-add-book{
+  position: relative;
+  left: 84%;
+}
+
+.form-container .btn-message{
+  position: relative;
+  left: 79%;
+  margin-top: 25px;
+}
+
+.form-container .btn-update{
+  position: relative;
+  left: 86%;
+}
+
+
+/*** SUCCESS MESSAGE ****/
+.forms-container .success p {
+  color: #383d41;
+  position: relative;
+  text-align: center;
+  top: -10px;
+  background-color: #D0F2A1;
+  border-radius: 5px;
+  border: 0.5px solid #06D001;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.success p {
+  color: #383d41;
+  position: relative;
+  text-align: center;
+  top: -10px;
+  background-color: #D0F2A1;
+  border-radius: 5px;
+  border: 0.5px solid #06D001;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.card-container{
+  position: absolute;
+  left: 417px;
+  width: 60%;
+  top: 150px;
+}
+.card{
+  max-width: 800px; 
+  margin: auto; 
+  
+}
+
+.card .btn-edit{
+  position: relative;
+  left: 80%;
+ 
+}
